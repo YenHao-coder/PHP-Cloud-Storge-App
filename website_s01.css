@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+TC&family=Noto+Serif+TC&family=Rowdies&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container-2 {
+  width: 75%;
+  margin: auto;
+  overflow: hidden; /* 防止偽元素超出 container-2 時產生捲軸 (可選) */
+}
+@media (max-width: 992px) {
+  .container-2 {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .container-2 {
+    width: 95%;
+  }
+}
+
+body {
+  font-family: arial, "Noto Serif TC", sans-serif;
+  font-size: 16px;
+  padding-top: 50px;
+  background-color: #f9e3eb;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  /* color:#ec7a9a; */
+}
+.navbar {
+  padding: 0;
+  background-color: #f9e3eb;
+}
+.nav-link {
+  color: #495057 !important;
+  font-weight: 200;
+  font-size: 1.4vw;
+}
+.dropdown-item {
+  color: #495057 !important;
+  font-size: 1.2vw;
+}
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+  margin-right: 80%;
+}
+.dropdown .dropdown-menu {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}
+.dropdown .dropdown-item:hover,
+.dropdown .dropdown-item:focus {
+  color: #fff !important;
+  background-color: #ec7a9a;
+}
+#carouselExampleSlidesOnly {
+  font-size: 28px;
+  font-weight: bolder;
+  text-align: center;
+}
+#content {
+  margin-top: 10px;
+}
+.row .col-md-2 .sidebar,
+.accordion-button {
+  border: 2px solid #dfdfdf;
+  background-color: #f7f7f7;
+}
+.sidebar {
+  padding: 5px;
+}
+.accordion-button {
+  font-size: 1.5vw;
+}
+.accordion-body {
+  padding: 0px;
+}
+.table {
+  margin-bottom: 0px;
+}
+.table td {
+  border-top: none;
+  border-bottom: 1px solid #dee2e6;
+  padding-left: 2rem;
+  font-size: 1.2vw;
+}
+#aboutme {
+  background-color: #eda2b7;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#last-data {
+  height: 120px;
+  background-color: #f9e3eb;
+  padding-top: 10px;
+}
+.card.text-center.mt-3 img {
+  opacity: 1;
+  transition: opcity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+}
+.card.text-center.mt-3 img:hover {
+  opacity: 0.5;
+  border: #e600a0 1px solid;
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75em 1em;
+  margin-bottom: 1rem;
+  list-style-type: none;
+  background-color: none;
+  border-radius: 0.25rem;
+}
+.breadcrumb a {
+  text-decoration: none;
+}
+.col-md-10 nav {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.card .row.mt-2 .col-md-4 a > img:hover {
+  border: #e600a0;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: #f8f9fa;
+}
+.color_ec7a9a {
+  color: #ec7a9a;
+}
+.color_495057 {
+  color: #495057;
+}
+.color-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.color-button {
+  background-color: #f7f7f7;
+  display: inline-block;
+  color: #6c757d;
+  border-color: #f7f7f7;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 0.75rem;
+}
+.btn-outline-pink {
+  color: #ec7a9a;
+  background-color: transparent;
+  margin-left: 0.75rem;
+  border-color: #ec7a9a;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.btn-outline-pink:hover {
+  color: #f8f9fa;
+  background-color: #ec7a9a;
+  border-color: #ec7a9a;
+  display: inline-block;
+}
+.color-pink-button {
+  color: #fff;
+  display: inline-block;
+  background-color: #ec7a9a;
+  border: none;
+  /* border-color:#ec7a9a ; */
+  border-radius: 0.375rem;
+  border-width: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 0.75rem;
+}
+.innerbg {
+  height: 11rem;
+}
+
+.innerLi {
+  display: flex;
+  background-color: #e9ecef;
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.375rem;
+  margin: 0.375rem;
+}
+.color-pink {
+  color: #fff;
+  display: inline-block;
+  background-color: #ec7a9a;
+  border: none;
+  /* border-color:#ec7a9a ; */
+  border-radius: 0.375rem;
+  border-width: 1px;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 0.75rem;
+}
+.badge.text-bg-info {
+  font-size: 40%;
+  color: white !important;
+}
+.color_red {
+  color: red;
+}
+.table-responsive-md table td {
+  text-align: center;
+}
+.table-responsive-md table tfoot td {
+  text-align: end;
+}
+.table-responsive-md table tr:hover {
+  background-color: rgba(152, 214, 245, 0.3);
+}
+.card-title {
+  /* 文字內容縮寫 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card-body,
+.card {
+  background-color: #f9e3eb;
+}
+.popover {
+  border: #f9e3eb;
+}
+.popover-arrow::after {
+  border: #f9e3eb;
+  border-style: none;
+}
+.popover-body {
+  background-color: #f9e3eb;
+  color: #495057;
+}
+
+.card,
+.nav-tabs .nav-link {
+  border: none;
+}
+.custom-pagination .page-item .page-link,
+.custom-pagination .page-link,
+.custom-pagination .active > .page-link {
+  background-color: #f9e3eb;
+  border-color: #f9e3eb;
+  color: #ec7a9a;
+}
+.custom-pagination .active > .page-link,
+.color-thead {
+  color: #fff;
+  background-color: #ec7a9a;
+  border-radius: 19px;
+}
+.footer-wrapper,
+.cart-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 40px;
+  list-style-type: none;
+}
+.footer-content,
+.footer-content a,
+.cart-content {
+  width: 100%;
+  list-style: none;
+  color: #f8f9fa;
+  padding: 0;
+  margin: 0;
+}
+.footer-wrapper > li > .footer-content {
+  display: none; /* 預設隱藏第二層 ul */
+}
+
+.footer-wrapper > li:hover > .footer-content {
+  display: block; /* hover 時顯示第二層 ul */
+}
+.myTabs,
+.nav-tabs .nav-link.active {
+  background-color: #ec7a9a;
+  color: #dee2e6;
+  border: none;
+}
+.delivInfo-container {
+  display: flex; /* 使用 Flexbox 讓內容在同一行且對齊 */
+  align-items: center; /* 垂直置中對齊內容 */
+  justify-content: space-between; /* 讓值（884）靠右對齊 */
+  background-color: #f9e3eb;
+  color: #495057; /* 深灰色文字顏色 */
+  padding: 0.375rem 0.75rem; /* 內部填充，上下10px，左右15px */
+  border-radius: 0.375rem; /* 輕微的圓角邊框 */
+  font-size: 1.1em; /* 基礎字體大小 */
+  max-width: 400px; /* 限制容器的最大寬度，可根據需要調整 */
+}
+.delivInfo-icon {
+  color:#ec7a9a;
+  font-size: 1.2em; /* 讓圖示更大一些 */
+  margin-right: 10px; /* 圖示和文字之間的間距 */
+  line-height: 1; /* 確保圖示垂直居中 */
+}
+.delivInfo-text {
+  flex-grow: 1; /* 讓文字部分佔據可用空間，將數值推到最右邊 */
+  font-size: 1.2em;
+  color: #b0b5bd; /* 讓文字顏色比容器的文字顏色稍深，看起來有層次感 */
+}
+.delivInfo-value{
+  font-weight: bold; /* 讓數值更粗體 */
+  font-size: 1.0em; /* 數值可以比文字稍大 */
+  color: #404957; /* 數值顏色可以更亮眼 */
+}
+.hitpoints-container {
+  background-color: #2e3137; /* 深色背景，根據圖片調整 */
+  color: #e0e0e0; /* 淺灰色文字顏色 */
+  padding: 10px 15px; /* 內部填充，上下10px，左右15px */
+  border-radius: 5px; /* 輕微的圓角邊框 */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* 選擇合適的字體 */
+  font-size: 1.1em; /* 基礎字體大小 */
+  margin-bottom: 10px; /* 如果有多個這樣的元素，提供一些間距 */
+  max-width: 300px; /* 限制容器的最大寬度，可根據需要調整 */
+}
+.hitpoints-icon {
+  font-size: 1.5em; /* 讓紅心更大一些 */
+  margin-right: 10px; /* 圖示和文字之間的間距 */
+  line-height: 1; /* 確保圖示垂直居中 */
+  /* 如果是圖片或 Font Awesome 圖示，可能需要調整大小 */
+}
+.hitpoints-text {
+  flex-grow: 1; /* 讓文字部分佔據可用空間，將數值推到最右邊 */
+  color: #b0b5bd; /* 讓文字顏色比容器的文字顏色稍深，看起來有層次感 */
+}
+.hitpoints-value {
+  font-weight: bold; /* 讓數值更粗體 */
+  font-size: 1.2em; /* 數值可以比文字稍大 */
+  color: #ffffff; /* 數值顏色可以更亮眼 */
+}
+.stats-row-container {
+  padding:  0.75rem 0rem;
+  background-color: #f9e3eb;
+  display: flex; /* 使用 Flexbox 佈局 */
+  gap:0.75rem; /* 設定兩個元素之間的間距 */
+  flex-wrap: wrap; /* 允許元素在空間不足時換行，保持響應性 */
+  justify-content: center; /* 如果你想讓這兩個元素在父容器中水平置中 */
+  /* 或者 align-items: flex-start; 如果你不希望它們垂直對齊 */
+}

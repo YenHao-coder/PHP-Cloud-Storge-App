@@ -1,0 +1,44 @@
+# Git ignore for PHP Project
+
+# PHP Composer dependencies
+/vendor/
+# 如果你希望團隊成員使用完全相同的依賴版本，可以考慮保留這個
+/composer.lock 
+# 如果你有用到前端套件管理器
+/node_modules/ 
+
+# Environment variables
+.env
+# 通常這個是不會忽略的，可以作為範例提供給使用者
+.env.example 
+# 或其他具體命名：
+# 如果你把實際密碼直接寫在這裡並想忽略它
+Connections/conn_db.php 
+
+# Application-specific generated files
+/cache/
+/logs/
+/tmp/
+# 使用者上傳的檔案，通常不應該在版本控制中
+/uploads/
+/product_img/ 
+
+# IDE and OS generated files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# 未使用模組件
+expstore.sql
+jquery3.6.0.min.js
+website_p01.css
+product_list.php
+sidebar.php
+hot.php
+index_p01.php
+/fancybox-2.1.7/
+
+# Other temporary files
+*.log
+# 如果你用.zip打包再上傳，原始的zip檔不需要提交到git
+*.zip 
