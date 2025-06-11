@@ -57,20 +57,28 @@
   - `conn_db.php`檔案的內容應包含您的資料庫連線資訊。請根據您的實際資料庫配置填寫：
 ```PHP
 <?php
-$servername = "localhost"; // 資料庫主機名稱 (若在本地 XAMPP 通常是 localhost)
+date_default_timezone_set("Asia/Taipei"); 設定為台北時區，或你網站目標訪客的時區
 $username = "您的資料庫用戶名"; // 請替換為您的 MariaDB/MySQL 用戶名
 $password = "您的資料庫密碼"; // 請替換為您的 MariaDB/MySQL 密碼
-$dbname = "cakes_shop_db"; // 您在步驟 2.a 中建立的資料庫名稱
+// mysql:host為資料庫主機名稱 (若在本地 XAMPP 通常是 localhost)
+// dbname 為您在步驟 2.a 中建立的資料庫名稱
+// charset建議使用 utf8mb4 以支援更廣泛的字元集，如 Emoji
+$dsn="mysql:host=localhost;dbname=cakes_shop_db;charset=utf8mb4";
 
+// 連線選項：可以幫助處理連線錯誤和設置模式
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, // 啟用例外處理模式
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,       // 預設以關聯陣列方式返回結果集
+    PDO::ATTR_EMULATE_PREPARES   => false,                  // 關閉模擬預處理語句，使用真實的預處理
 // 創建連線
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// 檢查連線
-if ($conn->connect_error) {
-    die("連線失敗: " . $conn->connect_error);
+try {
+    // 連線成功，可以繼續你的應用程式邏輯
+    $link = new PDO($dns, $username, $password);
+} catch {
+    // 連線失敗，顯示錯誤訊息並停止程式執行
+    // 記錄錯誤並顯示一個友好的錯誤頁面。
+    die("資料庫連線失敗: " . $e->getMessage());
 }
-// 設定字元集為 UTF-8，以避免中文亂碼
-$conn->set_charset("utf8");
 ?>
 ```
 4. 網頁伺服器設定 (Apache)：
